@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclases y Pseuelementos</title>
+    <style>
+        /*
+        cuando el usuario interactua con el mause sobre el
+        elemento aplica un stilo
+        */
+        li:hover {
+        color: red;
+        }
+        /*
+        segun la posicion del elemento cambia el stilo de este
+        */
+        div p:nth-child(3){
+        color: aquamarine;
+        }
+
+        /*
+        Estilo en cascada
+        sobre escribe los valores
+        */
+        h1{
+        color: red;
+        }
+
+        h1{
+        color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hola Mundo</h1>
+    <nav>
+        <ol>
+            <li>about us</li>
+            <li>contact us</li>
+            <li>products</li>
+        </ol>
+    </nav>
+    <div>
+        <p>Master class</p>
+        <p>USers</p>
+        <p>Login</p>
+    </div>
+</body>
+</html>
