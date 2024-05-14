@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Displays elementos</title>
+    <style>
+        body{
+            margin: 0;
+        }
+
+        .block{
+            background-color: aqua;
+            width: 200px;
+            height: 200px;
+            margin: 50px;
+            padding: 50px;
+        }
+        
+        a{
+            background-color: blueviolet;
+        }
+        
+        .inline-block{
+            background: aqua;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>inline</h1>
+        <a href="/">Inline</a>
+        <a href="/">Inline</a>
+        <a href="/">Inline</a>
+    </section>
+    <section>
+        <h1>block</h1>
+        <div class="block">Div es un elemento tipo bloque, ocupan todo el epscio de ancho en pantalla</div>
+        <div class="block">Se posicionan uno abajo del otro</div>
+    </section>
+    <section>
+        <div>
+            <h1>inline-block</h1>
+            <a href="/">inline</a>
+            <button class="inline-block">inline-block</button>
+        </div>
+    </section>
+</body>
+</html>
