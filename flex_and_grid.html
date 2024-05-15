@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox and CSS Grid</title>
+    <style>
+
+        .container{ /* por defecto los elementos son row*/
+            display: flex;
+            background: papayawhip;
+            justify-content: space-evenly; /*espacio entre elementos*/
+            align-items: center; /* alinea los elementos en el centro*/
+            flex-direction: column; /* podemos cambiar de row a columns*/
+            height: 200px;
+        } /*
+            el contendor es quien tendra nuestros elementos dentro de si, para poder trabajar
+            con este se clara en el html la class .contenedora
+        */
+
+        .item{/* los items seran los que estaran detnro del contenedor, estos tambien pueden
+            ser contenedores*/
+            background: red;
+            width: 20px;
+            height: 20px;
+        }
+
+        .container .item:nth-child(2n+1){
+            background: aqua;
+        } /* puedo aplicar matematicas para indicar nth-child en este caso
+        se indica que todo lo impar sea de otro color
+        */
+        
+    </style>
+    <style>
+        .container1{ /* declarando regla de Elemento contendor Grid*/
+            
+            display: grid;
+            width: 400px;
+            height: 400px;
+            background-color: papayawhip;
+            /*Creando una de 4 x 4*/
+            grid-template-columns: 1fr 1fr 1fr 1fr; /*Indica la cantidad de columnas*/
+            grid-template-rows: 1fr 1fr 1fr 1fr; /*Indica la cantidad de filas*/
+        } /*Basicamente es crear una cudricula*/
+
+        .item1{ /*declarando el fondo de los items*/
+            background-color: pink;
+            color: aqua;
+        }
+
+        /*recordando selectores combinadores como .container1 .item1 que indica, elemento padre elemento decendiente*/
+        .container1 .item1:nth-child(1){
+            grid-column: 1 / 2;
+        }
+            /* posicionamiento de columnas en grid inicia / finaliza */
+        .container1 .item1:nth-child(2){
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+        .container1 .item1:nth-child(3){
+            grid-column: 3 / 4;
+            grid-row: 3 / 4;
+        }
+        .container1 .item1:nth-child(4){
+            grid-column: 4 / 5;
+            grid-row: 4 / 5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1> FlexBox </h1>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <div class="container1">
+        <dvi class="item1"><h1>CSSGrid</h1></dvi>
+        <dvi class="item1"></dvi>
+        <dvi class="item1"></dvi>
+        <dvi class="item1"></dvi>
+
+    </div>
+</body>
+</html>
